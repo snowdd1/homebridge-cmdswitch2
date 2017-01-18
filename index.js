@@ -80,9 +80,9 @@ cmdSwitchPlatform.prototype.addAccessory = function (data) {
   // Store and initialize variables into context
   var cache = accessory.context;
   cache.name = data.name;
-  cache.on_cmd = data.on_cmd;
-  cache.off_cmd = data.off_cmd;
-  cache.state_cmd = data.state_cmd;
+  cache.on_cmd = data.on_cmd || "";
+  cache.off_cmd = data.off_cmd || "";
+  cache.state_cmd = data.state_cmd || "";
   cache.polling = data.polling;
   cache.interval = data.interval;
   cache.manufacturer = data.manufacturer;
